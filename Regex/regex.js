@@ -45,7 +45,15 @@ let masque6 = /[ ,']/;
 // Dès qu'une espace, une virgule ou une apostrophe est rencontrée, la chaine 
 // de départ est découpée en une nouvelle sous chaine qui est placée dans un tableau
 let sousChaine = chaine.split(masque6);
-let p11 = document.getElementById('p11');
-p11.innerHTML = 'Premier élément du tableau : ' + sousChaine[0] + 
+let p10 = document.getElementById('p10');
+p10.innerHTML = 'Premier élément du tableau : ' + sousChaine[0] + 
                 '<br> Deuxième élément du tableau : ' + sousChaine[1] + 
                 '<br> Troisième élément du tableau : ' + sousChaine[2]; 
+
+// Exec va rechercher une correspondance entre une expressions régulières et une chaine de caractère  
+// Cette méthode retourne un tableau avec les résultats si au moins une correspondance a
+// été trouvée ou null dans le cas contraire.
+// let masque1 = /Pierre/;
+let p11 = document.getElementById('p11');
+let resultat = masque1.exec(chaine);
+p11.textContent = 'Résultat : ' + resultat[0];
